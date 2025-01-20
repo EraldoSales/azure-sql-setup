@@ -17,9 +17,9 @@ try:
 
         # Dados a serem inseridos, omitindo o 'Id' para que seja gerado automaticamente
         produtos = [
-            ('Produto A'),
-            ('Produto B'),
-            ('Produto C')
+            ('Produto D'),
+            ('Produto E'),
+            ('Produto F')
         ]
         
         # Inserir os dados na tabela 'produto'

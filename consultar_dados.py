@@ -14,17 +14,17 @@ try:
     # Conectar ao banco de dados
     with pyodbc.connect(conn_str) as conn:
         cursor = conn.cursor()
-               
-        #Consulta para selecionar todos os produtos
-        cursor.execute("SELECT Id, Nome FROM produto")
 
-        #Buscar os resultados
-        produtos = cursor.fetchall()
+        # Consulta para selecionar todos os filmes
+        cursor.execute("SELECT Id, nome_port, nome_original, genero, ano_lancamento FROM filmes")
 
-        #Exibir resultados
-        print("Dados na Tabela 'produto':")
-        for produto in produtos:
-            print(f"Id: {produto.Id}, Nome: {produto.Nome}")
+        # Buscar os resultados
+        filmes = cursor.fetchall()
+
+        # Exibir resultados
+        print("Dados na Tabela 'filmes':")
+        for filme in filmes:
+            print(f"Id: {filme.Id}, Nome (PT): {filme.nome_port}, Nome Original: {filme.nome_original}, Gênero: {filme.genero}, Ano de Lançamento: {filme.ano_lancamento}")
  
 except pyodbc.Error as e:
     print("Erro ao conectar ou executar o comando:", e)

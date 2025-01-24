@@ -17,13 +17,16 @@ try:
         
         # Comando para criar a tabela
         create_table_query = """
-        CREATE TABLE produto (
+        CREATE TABLE filmes (
             Id INT PRIMARY KEY IDENTITY(1,1),
-            Nome VARCHAR(100) NOT NULL
+            nome_port VARCHAR(200) NOT NULL,
+            nome_original VARCHAR(200) NOT NULL,
+            genero VARCHAR(100),
+            ano_lancamento INT
         );
         """
         cursor.execute(create_table_query)
-        print("Tabela 'produto' criada com sucesso!")
+        print("Tabela 'filmes' criada com sucesso!")
         
 except pyodbc.Error as e:
     print("Erro ao conectar ou executar o comando:", e)

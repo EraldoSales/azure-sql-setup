@@ -14,6 +14,7 @@ try:
     # Conectar ao banco de dados
     with pyodbc.connect(conn_str) as conn:
         cursor = conn.cursor()
+<<<<<<< HEAD
         
         # Lista de filmes para popular a tabela
         filmes = [
@@ -37,6 +38,14 @@ try:
             ("Gladiador", "Gladiator", "Ação/Drama", 2000),
             ("Cidadão Kane", "Citizen Kane", "Drama/Mistério", 1941),
             ("Casablanca", "Casablanca", "Drama/Romance", 1942),
+=======
+
+        # Dados a serem inseridos, omitindo o 'Id' para que seja gerado automaticamente
+        produtos = [
+            ('Produto D'),
+            ('Produto E'),
+            ('Produto F')
+>>>>>>> f6fec64bec401f46e80e5d37f29970ea2f04e985
         ]
         
         # Comando para inserir os filmes na tabela
